@@ -50,10 +50,8 @@ namespace Lab4
                             Thread.Sleep(1000);
                         }
                     }
-                }                     
-              
+                }                                   
                 RamA += 1;
-
                 if (RamA > 500)
                 {
                     while (RamA > 500)
@@ -72,12 +70,8 @@ namespace Lab4
                             Thread.Sleep(1000);
                         }
                     }
-                }
-
-                
-                
+                }                             
                 RamE += 1;
-
                 if (RamE > 1500)
                 {
                     while (RamE > 1500)
@@ -96,12 +90,8 @@ namespace Lab4
                             Thread.Sleep(1000);
                         }
                     }
-                }
-
-
-                
+                }          
                 RamV += 1;
-
                 if (RamV > 800)
                 {
                     while (RamV > 800)
@@ -120,11 +110,8 @@ namespace Lab4
                             Thread.Sleep(1000);
                         }
                     }
-                }
-
-                
+                }            
                 RamEM += 1;
-
                 if (RamEM > 1200)
                 {
                     while (RamEM > 1200)
@@ -144,10 +131,7 @@ namespace Lab4
                         }
                     }
                 }
-                Hora += 1;
-                
-
-                
+                Hora += 1;                            
             }
             Console.WriteLine("Fin de la Jornada...\n");
             inicioR.Apagar();
