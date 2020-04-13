@@ -16,8 +16,6 @@ namespace Lab4
         }
         public void Operar()
         {
-
         }
-    }
-    
+    }    
 }

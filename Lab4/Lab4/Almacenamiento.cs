@@ -6,8 +6,6 @@ namespace Lab4
 {
     class Almacenamiento: Control
     {
- 
-
         public void Prender()
         {
             Console.WriteLine("Almacenamiento Encendido\n");
@@ -18,7 +16,6 @@ namespace Lab4
         }
         public void Operar()
         {
-
         }
     }
 }

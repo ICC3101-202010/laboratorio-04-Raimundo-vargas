@@ -7,6 +7,7 @@ namespace Lab4
     {
         static void Main()
         {
+            Console.WriteLine("Inicio de la jornada...\n");
             Recepcion R = new Recepcion();
             Almacenamiento A = new Almacenamiento();
             ensamblaje E = new ensamblaje();
@@ -27,65 +28,133 @@ namespace Lab4
             int RamV = 0;
             inicioEM.Prender();
             int RamEM = 0;
-
-
-            while (true)
+            int Hora = 0;
+            while (Hora<3600)
             {
                 RamR += 1;
-                if (RamR == 10)
+                if (RamR > 1000)
                 {
-                    Console.WriteLine("#############################################################");
-                    Console.WriteLine("La Maquina de Recepcion colapso, Reiniciar para liberar RAM\n");
-                    inicioR.Reiniciar();
-                    Console.WriteLine("#############################################################");
-                    RamR = 0;
-                    Thread.Sleep(1000);
-                }
+                    while (RamR > 1000)
+                    {
+                        {
+                            Console.WriteLine("#############################################################");
+                            Console.WriteLine("La Maquina de Recepcion colapso a las: "+Hora+", Reiniciar para liberar RAM\n");
+                            Console.WriteLine("Presione 2 para reiniciar");
+                            string respuesta = Console.ReadLine();
+                            if (respuesta=="2")
+                            {
+                                inicioR.Reiniciar();
+                                RamR = 0;
+                            }                           
+                            Console.WriteLine("#############################################################");                            
+                            Thread.Sleep(1000);
+                        }
+                    }
+                }                     
+              
                 RamA += 1;
-                if (RamA == 5)
+
+                if (RamA > 500)
                 {
-                    Console.WriteLine("#############################################################");
-                    Console.WriteLine("La Maquina de Almacenamiento colapso, Reiniciar para liberar RAM\n");
-                    inicioA.Reiniciar();
-                    Console.WriteLine("#############################################################");
-                    RamA = 0;
-                    Thread.Sleep(1000);
+                    while (RamA > 500)
+                    {
+                        {
+                            Console.WriteLine("#############################################################");
+                            Console.WriteLine("La Maquina de Almacenamiento colapso a las: " + Hora + ", Reiniciar para liberar RAM\n");
+                            Console.WriteLine("Presione 2 para reiniciar");
+                            string respuesta = Console.ReadLine();
+                            if (respuesta == "2")
+                            {
+                                inicioA.Reiniciar();
+                                RamA = 0;
+                            }
+                            Console.WriteLine("#############################################################");
+                            Thread.Sleep(1000);
+                        }
+                    }
                 }
+
+                
+                
                 RamE += 1;
-                if (RamE == 8)
+
+                if (RamE > 1500)
                 {
-                    Console.WriteLine("#############################################################");
-                    Console.WriteLine("La Maquina de Ensamblaje colapso, Reiniciar para liberar RAM\n");
-                    inicioE.Reiniciar();
-                    RamE = 0;
-                    Console.WriteLine("#############################################################");
-                    Thread.Sleep(1000);
+                    while (RamE > 1500)
+                    {
+                        {
+                            Console.WriteLine("#############################################################");
+                            Console.WriteLine("La Maquina de Ensamblaje colapso a las: " + Hora + ", Reiniciar para liberar RAM\n");
+                            Console.WriteLine("Presione 2 para reiniciar");
+                            string respuesta = Console.ReadLine();
+                            if (respuesta == "2")
+                            {
+                                inicioE.Reiniciar();
+                                RamE = 0;
+                            }
+                            Console.WriteLine("#############################################################");
+                            Thread.Sleep(1000);
+                        }
+                    }
                 }
+
+
+                
                 RamV += 1;
-                if (RamV == 20)
+
+                if (RamV > 800)
                 {
-                    Console.WriteLine("#############################################################");
-                    Console.WriteLine("La Maquina de Verificacion colapso, Reiniciar para liberar RAM\n");
-                    inicioV.Reiniciar();
-                    Console.WriteLine("#############################################################");
-                    RamV = 0;
-                    Thread.Sleep(1000);
+                    while (RamV > 800)
+                    {
+                        {
+                            Console.WriteLine("#############################################################");
+                            Console.WriteLine("La Maquina de Verificacion colapso a las: " + Hora + ", Reiniciar para liberar RAM\n");
+                            Console.WriteLine("Presione 2 para reiniciar");
+                            string respuesta = Console.ReadLine();
+                            if (respuesta == "2")
+                            {
+                                inicioV.Reiniciar();
+                                RamV = 0;
+                            }
+                            Console.WriteLine("#############################################################");
+                            Thread.Sleep(1000);
+                        }
+                    }
                 }
+
+                
                 RamEM += 1;
-                if (RamEM == 15)
+
+                if (RamEM > 1200)
                 {
-                    Console.WriteLine("#############################################################");
-                    Console.WriteLine("La Maquina de Empaque colapso, Reiniciar para liberar RAM\n");
-                    inicioEM.Reiniciar();
-                    Console.WriteLine("#############################################################");
-                    RamEM = 0;
-                    Thread.Sleep(1000);
+                    while (RamEM > 1200)
+                    {
+                        {
+                            Console.WriteLine("#############################################################");
+                            Console.WriteLine("La Maquina de Empaque colapso a las: " + Hora + ", Reiniciar para liberar RAM\n");
+                            Console.WriteLine("Presione 2 para reiniciar");
+                            string respuesta = Console.ReadLine();
+                            if (respuesta == "2")
+                            {
+                                inicioEM.Reiniciar();
+                                RamEM = 0;
+                            }
+                            Console.WriteLine("#############################################################");
+                            Thread.Sleep(1000);
+                        }
+                    }
                 }
+                Hora += 1;
+                
 
-
+                
             }
-
-
+            Console.WriteLine("Fin de la Jornada...\n");
+            inicioR.Apagar();
+            inicioA.Apagar();
+            inicioE.Apagar();
+            inicioV.Apagar();
+            inicioEM.Apagar();
         }
     }
 }

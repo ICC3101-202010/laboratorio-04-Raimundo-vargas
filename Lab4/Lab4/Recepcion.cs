@@ -5,9 +5,7 @@ using System.Text;
 namespace Lab4
 {
     class Recepcion: Control
-    {
-        
-
+    {     
         public void Prender()
         {         
             Console.WriteLine("Recepcion Encendido\n");  
@@ -18,10 +16,6 @@ namespace Lab4
         }
         public void Operar()
         {
-
         }
-
-
-
     }
 }
