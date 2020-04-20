@@ -8,7 +8,7 @@ namespace Lab4
         static void Main()
         {
             Console.WriteLine("Inicio de la jornada...\n");
-            Recepcion R = new Recepcion();
+            Recepcion R = new Recepcion();            
             Almacenamiento A = new Almacenamiento();
             ensamblaje E = new ensamblaje();
             verificación V = new verificación();
@@ -19,6 +19,7 @@ namespace Lab4
             Computador inicioV = new Computador(V);
             Computador inicioEM = new Computador(EM);
             inicioR.Prender();
+            inicioA.
             int RamR = 0;
             inicioA.Prender();
             int RamA = 0;

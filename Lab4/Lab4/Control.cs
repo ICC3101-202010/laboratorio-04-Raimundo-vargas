@@ -8,6 +8,5 @@ namespace Lab4
     { 
         void Prender();
         void Apagar();
-        void Operar();
     }
 }

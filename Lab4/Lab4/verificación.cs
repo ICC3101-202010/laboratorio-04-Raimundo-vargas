@@ -14,8 +14,5 @@ namespace Lab4
         {
             Console.WriteLine("Verificacion Apagado\n");
         }
-        public void Operar()
-        {
-        }
     }    
 }
