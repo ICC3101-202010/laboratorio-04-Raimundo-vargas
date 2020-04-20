@@ -30,6 +30,6 @@ namespace Lab4
             control.Apagar();
             Thread.Sleep(1000);
             control.Prender();
-        }
+        }       
     }
 }
