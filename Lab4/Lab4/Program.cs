@@ -19,7 +19,6 @@ namespace Lab4
             Computador inicioV = new Computador(V);
             Computador inicioEM = new Computador(EM);
             inicioR.Prender();
-            inicioA.
             int RamR = 0;
             inicioA.Prender();
             int RamA = 0;
